@@ -22,7 +22,15 @@ public class PersonService {
         return personDB.selectAllPeople();
     }
 
-    public Optional<Person> selectPersonById(UUID id) {
+    public Optional<Person> getPersonById(UUID id) {
         return personDB.selectPersonById(id);
+    }
+
+    public int deletePerson(UUID id) {
+        return personDB.deletePersonById(id);
+    }
+
+    public int updatePerson(UUID id, Person person) {
+        return personDB.updatePersonById(id, person);
     }
 }
