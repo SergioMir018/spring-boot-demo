@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@Repository("fakeDB")
+//@Repository("fakeDB")
 public class FakePersonDataAccessService implements PersonDB {
     private static List<Person> DB = new ArrayList<>();
 
