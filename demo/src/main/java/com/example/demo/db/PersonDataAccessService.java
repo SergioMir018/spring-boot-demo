@@ -53,10 +53,9 @@ public class PersonDataAccessService implements PersonDB {
         Person person = jdbcTemplate.queryForObject(
                 sql,
                 (resultSet, rowNum) -> {
-                    UUID personId = UUID.fromString(resultSet.getString("id"));
                     String name = resultSet.getString("name");
 
-                    return new Person(personId, name);
+                    return new Person(id, name);
                 },
                 id
         );
